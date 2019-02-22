@@ -1,0 +1,48 @@
+ul {
+  list-style: none;
+  padding: 0;
+  font-family: 'Tinos', serif;
+}
+
+.show-half {
+  font-size: 40px;
+  text-align: right;
+  ul {
+    margin-right: 75px;
+}
+  img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+}
+
+.navbar-lewagon {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  padding: 16px 24px;
+  h3 {
+    font-size: 25px;
+    font-family: 'Miss Fajardose', cursive;
+    color: white;
+  }
+  i {
+    font-size: 25px;
+    color: white;
+  }
+}
+
+.row {
+  margin: 30px;
+}
+
+h3 {
+  font-size: 45px;
+  font-family: 'Tinos', serif;
+  text-decoration: line-through;
+}
+

@@ -1,0 +1,71 @@
+// Import page-specific CSS files here.
+@import "home";
+
+body {
+  background-color: white;
+  text-align: center;
+  h1 {
+    font-size: 90px;
+    font-family: 'Miss Fajardose', cursive;
+    margin-top: 50px;
+  }
+  p {
+    font-family: 'Tinos', serif;
+  }
+}
+.container {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+.card-trip {
+  opacity: 0.8;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  a {
+    color: black;
+    font-family: 'Tinos', serif;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-trip:hover {
+  opacity: 1
+}
+
+.display-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.create-button {
+  margin: auto;
+}

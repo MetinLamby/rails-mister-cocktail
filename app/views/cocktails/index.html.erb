@@ -1,0 +1,35 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= image_url "bar_lights_banner.jpg", alt: "Le Wagon", width: 200 %>);">
+	<div>
+		<h1>Metin's Bar</h1>
+		<p>Create your own cocktails and enjoy!</p>
+	</div>
+</div>
+
+<h1>Cocktail Menu</h1>
+
+<div class="container">
+	<% @cocktails.each do |r| %>
+	<div class="col-xs-12 col-sm-4 col-md-3">
+		<%= link_to cocktail_path(r.id) do  %>
+		<div class="card-trip">
+			<%= image_tag  "cocktail.jpg" %>
+			<div class="card-trip-infos">
+				<div>
+					<%= link_to r.name, cocktail_path(r.id) %>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+	<% end %>
+</div>
+
+
+<div class="display-flex">
+	<%= link_to new_cocktail_path do  %>
+		<div class="create-button">Create a new cocktail</div>
+	<% end %>
+</div>
+
+
+

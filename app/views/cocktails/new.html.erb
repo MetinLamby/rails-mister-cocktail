@@ -1,0 +1,16 @@
+<div class="navbar-lewagon">
+  <%= link_to cocktails_path do  %>
+    <h3> Metin's Bar </h3>
+  <% end %>
+  <%= link_to cocktails_path do  %>
+    <i class="fas fa-cocktail"></i>
+  <% end %>
+</div>
+
+<%= simple_form_for @cocktail do |f| -%>
+  <%= f.input :name %>
+  <%= f.submit "Add a Cocktail", class: "create-button" %>
+<% end -%>
+
+
+<p><%= link_to "Back to Cocktail List", cocktails_path, class: "create-button second-btn" %></p>

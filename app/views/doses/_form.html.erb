@@ -1,0 +1,8 @@
+
+<div class="form-inlining">
+  <%= simple_form_for [cocktail, dose], :html => { class: 'form'} do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "Add to Cocktail", class:"create-button" %>
+  <% end %>
+</div>

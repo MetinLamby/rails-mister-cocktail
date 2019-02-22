@@ -1,0 +1,43 @@
+<div class="navbar-lewagon">
+  <%= link_to cocktails_path do  %>
+    <h3> Metin's Bar </h3>
+  <% end %>
+  <%= link_to cocktails_path do  %>
+    <i class="fas fa-cocktail"></i>
+  <% end %>
+</div>
+
+
+<h1><%= @cocktail.name %></h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+          <h3>Ingredients</h3>
+      <div class="show-half">
+        <div class="cocktail-desc">
+          <ul>
+            <% @cocktail.doses.each do |dose| %>
+            <li><%= dose.ingredient.name %> <%= dose.description %> ---
+              <%= link_to "❌", dose_path(dose), method: :delete %>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="show-half"><%= image_tag  "cocktail.jpg" %></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div>
+  <%= render "doses/form", cocktail: @cocktail, dose: @dose %>
+</div>
+
+<div><%= link_to "Back to Cocktail Menu", cocktails_path, class:"create-button"%></div>
+
+
+
